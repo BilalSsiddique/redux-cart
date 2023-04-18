@@ -16,9 +16,9 @@ const Cart = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector(selectedProducts);
   console.log("productsss", products);
-
+  const itemsCheck = products.length===0 
   return (
-    <div className="bg-black items-center justify-center mt-0 p-12 sm:py-24 sm:px-32 flex flex-col gap-10">
+    <div className={`bg-black ${itemsCheck && 'justify-center items-center'}  mt-0 p-12 sm:py-24 sm:px-32 flex flex-col gap-10`}>
       {products.length === 0 && (
         <div className="bg-white h-[300px] gap-2 p-5 rounded-lg w-[250px]  flex flex-col  justify-center ">
           <p className="text-black  font-bold">
