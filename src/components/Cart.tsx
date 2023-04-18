@@ -28,7 +28,7 @@ const Cart = () => {
       {Array.isArray(products) && products.length === 0 && (
         <div className="bg-white h-[300px] gap-2 p-5 rounded-lg w-[250px]  flex flex-col  justify-center ">
           <p className="text-black  font-bold">
-            No Item in the cart. Go Back to Start Shopping{" "}
+            You have no items in your shopping bag.Go Back to Start Shopping.{" "}
           </p>
           <Link
             href="/"
