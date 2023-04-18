@@ -5,7 +5,7 @@ import {
   add,
   remove,
   selectedProducts,
-  updateQuantity,
+  update,
 } from "../store/slices/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
 import Image from "next/image";
@@ -54,7 +54,7 @@ const Cart = () => {
             <div className=" flex gap-1  ">
               <AiFillMinusCircle
                 className="hover:text-[#764abc] self-end cursor-pointer"
-                onClick={() => dispatch(updateQuantity(product))}
+                onClick={() => dispatch(update(product))}
                 size={20}
               />
               <p className="justify-self-start font-bold ">

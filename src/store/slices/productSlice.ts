@@ -26,9 +26,9 @@ const initialState: InitialState = {
   error: "",
 };
 
-console.log(initialState)
 
-// Thunks
+
+
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {

@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import type { Product } from "./productSlice";
-import { useAppSelector } from "../hook";
 
 // type Initial State
 
@@ -20,7 +19,6 @@ const cartSlice = createSlice({
   reducers: {
     add(state, action: PayloadAction<Product>) {
       const newItem = action.payload;
-      console.log('checkprice',newItem)
       const itemToUpdate = state.products.find(
         (item) => item.id === newItem.id
       );
@@ -39,7 +37,7 @@ const cartSlice = createSlice({
         state.products.splice(index, 1);
       }
     },
-    updateQuantity(state,action:PayloadAction<Product>){
+    update(state,action:PayloadAction<Product>){
       const newItem = action.payload;
       if (newItem.quantity===1) return
       const itemToUpdate = state.products.find(
@@ -54,7 +52,7 @@ const cartSlice = createSlice({
   }
 });
 
-export const { add, remove,updateQuantity } = cartSlice.actions;
+export const { add, remove,update } = cartSlice.actions;
 
 export const totalProductsCount = (state: RootState) =>
   state.cart.products.length;
