@@ -17,15 +17,14 @@ import {IoMdRemoveCircle} from 'react-icons/io'
 const Cart = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector(selectedProducts);
-  console.log("productsss", products);
   const itemsCheck = products.length === 0;
   return (
     <div
-      className={`bg-black ${
+      className={`bg-black h-screen ${
         itemsCheck && "justify-center items-center"
       }  mt-0 p-12 sm:py-24 sm:px-32 flex flex-col gap-10`}
     >
-      {Array.isArray(products) && products.length === 0 && (
+      {Array.isArray(products) && itemsCheck && (
         <div className="bg-white h-[300px] gap-2 p-5 rounded-lg w-[250px]  flex flex-col  justify-center ">
           <p className="text-black  font-bold">
             You have no items in your shopping bag.Go Back to Start Shopping.{" "}
