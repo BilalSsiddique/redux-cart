@@ -15,7 +15,7 @@ const Product = () => {
   useEffect(() => {
     dispatch(fetchProducts());
     
-  }, []);
+  }, [dispatch]);
 
   if (loading) return <Loader />;
 

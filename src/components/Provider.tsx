@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 
 import React from 'react'
 
-const Providers = ({children}:{React:React.ReactNode}) => {
+const Providers = ({children}:{ children: React.ReactNode }) => {
   return (
    <Provider store={store}>
       {children}
