@@ -3,7 +3,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { PayloadAction } from "@reduxjs/toolkit";
-import Product from "@/components/Product";
+
 
 export type Product = {
   id: number;
